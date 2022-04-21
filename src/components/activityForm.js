@@ -29,6 +29,10 @@ const StyledActivityForm = styled.div`
   button.disabled {
     opacity: 0.4;
     cursor: pointer;
+    &:hover {
+      transform: translateY(-10px);
+      opacity: 1;
+    }
   }
 
   .attribute {

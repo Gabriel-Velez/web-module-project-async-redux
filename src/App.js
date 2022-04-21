@@ -41,15 +41,11 @@ const StyledApp = styled.div`
     background-color: ${(props) => props.theme.colors.vibrant.clarent};
     transition: transform ${(props) => props.theme.animation.double},
       opacity ${(props) => props.theme.animation.base};
-    &:hover {
-      transform: translateY(-10px);
-      opacity: 1;
+    svg {
+      margin-right: 10px;
     }
     &:focus {
       outline: none;
-    }
-    svg {
-      margin-right: 10px;
     }
   }
 `;
