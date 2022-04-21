@@ -4,7 +4,7 @@ export default {
       clarent: "#89023E",
       blueJeans: "#20A4F3",
       coral: "#FF7F51",
-      candyPink: "#E76D83",
+      limeGreen: "#58bf70",
     },
     grey: "#999999",
     lightGrey: "#a1a1a1",

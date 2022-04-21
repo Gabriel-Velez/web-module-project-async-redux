@@ -52,7 +52,7 @@ const StyledActivityForm = styled.div`
     }
     &.price {
       button {
-        background-color: ${(props) => props.theme.colors.vibrant.candyPink};
+        background-color: ${(props) => props.theme.colors.vibrant.limeGreen};
       }
     }
   }
