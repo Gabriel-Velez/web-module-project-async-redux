@@ -1,7 +1,7 @@
 export default {
   colors: {
     vibrant: {
-      clarent: "#89023E",
+      clarent: "#AF024F",
       blueJeans: "#20A4F3",
       coral: "#FF7F51",
       limeGreen: "#58bf70",
