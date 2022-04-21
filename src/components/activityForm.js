@@ -21,9 +21,9 @@ const StyledActivityForm = styled.div`
   #submit {
     transition: transform ${(props) => props.theme.animation.base};
     margin-top: 25px;
-  }
-  #submit:hover {
-    transform: scale(1.125);
+    &:hover {
+      transform: scale(1.125);
+    }
   }
 
   button.disabled {
