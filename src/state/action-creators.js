@@ -20,8 +20,16 @@ export const fetchSpecificActivityFromApi = (url) => (dispatch) => {
   axios
     .get(url)
     .then((res) => {
-      const activityFromApi = res.data.activity;
-      dispatch({ type: types.POPULATE_ACTIVITY, payload: activityFromApi });
+      if (res.data.error) {
+        console.log(res);
+        const errorFromApi = res.data.error;
+        dispatch({ type: types.POPULATE_ERROR, payload: errorFromApi });
+      } else {
+        console.log(res);
+        const activityFromApi = res.data.activity;
+        dispatch({ type: types.POPULATE_ACTIVITY, payload: activityFromApi });
+        dispatch({ type: types.POPULATE_ERROR, payload: "" });
+      }
     })
     .catch((err) => {
       (err) => console.error(err);

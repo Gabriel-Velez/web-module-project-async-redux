@@ -12,5 +12,15 @@ function activity(activityStateSlice = initalActivity, action) {
   }
 }
 
-const rootReducer = combineReducers({ activity });
+const initalError = "";
+function error(errorStateSlice = initalError, action) {
+  switch (action.type) {
+    case types.POPULATE_ERROR:
+      return action.payload;
+    default:
+      return errorStateSlice;
+  }
+}
+
+const rootReducer = combineReducers({ activity, error });
 export default rootReducer;
