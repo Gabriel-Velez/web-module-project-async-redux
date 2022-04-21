@@ -127,28 +127,13 @@ function Form(props) {
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
         {/*value is "minprice", "maxprice" for api call*/}
-        <button
-          className='disabled'
-          onClick={selectCurrentButton}
-          max={0}
-          min={0.25}
-          value={["0", ".25"]}>
+        <button className='disabled' onClick={selectCurrentButton} max={0} min={0.25}>
           <FontAwesomeIcon icon={faCoins} /> Cheap
         </button>
-        <button
-          className='disabled'
-          onClick={selectCurrentButton}
-          max={0.25}
-          min={0.5}
-          value={[".25", ".5"]}>
+        <button className='disabled' onClick={selectCurrentButton} max={0.25} min={0.5}>
           <FontAwesomeIcon icon={faMoneyBills} /> Affordable
         </button>
-        <button
-          className='disabled'
-          onClick={selectCurrentButton}
-          max={0.5}
-          min={1}
-          value={[".5", "1"]}>
+        <button className='disabled' onClick={selectCurrentButton} max={0.5} min={1}>
           <FontAwesomeIcon icon={faSackDollar} /> Expensive
         </button>
       </div>
