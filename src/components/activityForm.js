@@ -13,7 +13,7 @@ import {
   faUsers,
   faCoins,
   faMoneyBills,
-  faSackDollar,
+  faHandHoldingDollar,
 } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
@@ -128,14 +128,14 @@ function Form(props) {
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
         {/*value is "minprice", "maxprice" for api call*/}
-        <button className='disabled' onClick={selectCurrentButton} min={0} max={0.25}>
-          <FontAwesomeIcon icon={faCoins} /> Cheap
+        <button className='disabled' onClick={selectCurrentButton} max={0}>
+          <FontAwesomeIcon icon={faHandHoldingDollar} /> Free
         </button>
-        <button className='disabled' onClick={selectCurrentButton} min={0.25} max={0.5}>
-          <FontAwesomeIcon icon={faMoneyBills} /> Affordable
+        <button className='disabled' onClick={selectCurrentButton} min={0.1} max={0.5}>
+          <FontAwesomeIcon icon={faCoins} /> Affordable
         </button>
         <button className='disabled' onClick={selectCurrentButton} min={0.5} max={1}>
-          <FontAwesomeIcon icon={faSackDollar} /> Expensive
+          <FontAwesomeIcon icon={faMoneyBills} /> Expensive
         </button>
       </div>
 
