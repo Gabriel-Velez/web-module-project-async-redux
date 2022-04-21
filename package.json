@@ -31,6 +31,9 @@
     "webpack-dev-server": "4.4.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
     "@testing-library/user-event": "13.5.0",
     "axios": "0.24.0",
     "cors": "2.8.5",
@@ -45,9 +48,10 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "5.2.0",
     "redux": "^4.1.2",
+    "redux-thunk": "^2.4.1",
     "sass": "^1.32.8",
     "style-loader": "^3.3.1",
-    "styled-components": "5.3.3",
+    "styled-components": "^5.3.3",
     "webpack-cli": "^4.9.1"
   }
 }
