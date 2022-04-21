@@ -69,8 +69,6 @@ function Form(props) {
   };
 
   const handelSubmit = () => {
-    //need to loop over all buttons with the active class
-    //then grab their values and toss them into a new action with thoese values as perameters
     const typeValue = document.querySelector("#type .active").value;
     const participantsValue = document.querySelector("#participants .active").value;
     const priceMax = document.querySelector("#price .active").getAttribute("max");
