@@ -79,8 +79,8 @@ function Form(props) {
       const url = new URL("http://www.boredapi.com/api/activity?");
       if (typeValue) url.searchParams.append("type", typeValue);
       if (participantsValue) url.searchParams.append("participants", participantsValue);
-      if (priceMax) url.searchParams.append("minprice", priceMax);
-      if (priceMin) url.searchParams.append("maxprice", priceMin);
+      if (priceMax) url.searchParams.append("maxprice", priceMax);
+      if (priceMin) url.searchParams.append("minprice", priceMin);
       fetchSpecificActivityFromApi(url.href);
     }
   };
@@ -127,13 +127,13 @@ function Form(props) {
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
         {/*value is "minprice", "maxprice" for api call*/}
-        <button className='disabled' onClick={selectCurrentButton} max={0} min={0.25}>
+        <button className='disabled' onClick={selectCurrentButton} min={0} max={0.25}>
           <FontAwesomeIcon icon={faCoins} /> Cheap
         </button>
-        <button className='disabled' onClick={selectCurrentButton} max={0.25} min={0.5}>
+        <button className='disabled' onClick={selectCurrentButton} min={0.25} max={0.5}>
           <FontAwesomeIcon icon={faMoneyBills} /> Affordable
         </button>
-        <button className='disabled' onClick={selectCurrentButton} max={0.5} min={1}>
+        <button className='disabled' onClick={selectCurrentButton} min={0.5} max={1}>
           <FontAwesomeIcon icon={faSackDollar} /> Expensive
         </button>
       </div>
