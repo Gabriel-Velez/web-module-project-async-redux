@@ -95,7 +95,7 @@ function Form(props) {
           <FontAwesomeIcon icon={faUtensils} /> Cooking
         </button>
       </div>
-      <h3>Number of Participants</h3>
+      <h3>Peeps</h3>
       <div className='row participants' id='participants'>
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
