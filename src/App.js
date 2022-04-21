@@ -34,6 +34,7 @@ const StyledApp = styled.div`
   }
 
   button {
+    border-radius: 5px;
     padding: 20px;
     border: 0;
     color: ${(props) => props.theme.colors.white};
@@ -41,7 +42,7 @@ const StyledApp = styled.div`
     transition: transform ${(props) => props.theme.animation.double},
       opacity ${(props) => props.theme.animation.base};
     &:hover {
-      transform: translateY(-20px);
+      transform: translateY(-10px);
       opacity: 1;
     }
     &:focus {
