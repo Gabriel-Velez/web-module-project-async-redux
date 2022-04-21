@@ -39,7 +39,7 @@ const StyledApp = styled.div`
     border: 0;
     color: ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.vibrant.clarent};
-    transition: transform ${(props) => props.theme.animation.double},
+    transition: transform ${(props) => props.theme.animation.base},
       opacity ${(props) => props.theme.animation.base};
     svg {
       margin-right: 10px;

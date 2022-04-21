@@ -29,6 +29,8 @@ const StyledActivityForm = styled.div`
   button.disabled {
     opacity: 0.4;
     cursor: pointer;
+    transition: transform ${(props) => props.theme.animation.double},
+      opacity ${(props) => props.theme.animation.base};
     &:hover {
       transform: translateY(-10px);
       opacity: 1;
