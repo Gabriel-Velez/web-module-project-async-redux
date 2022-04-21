@@ -56,7 +56,7 @@ const StyledActivityForm = styled.div`
 `;
 
 function Form(props) {
-  const { fetchRandomActivityFromApi } = props;
+  const { fetchRandomActivityFromApi, fetchSpecificActivityFromApi } = props;
 
   const selectCurrentButton = (e) => {
     const parentElem = e.target.parentElement;
@@ -71,7 +71,21 @@ function Form(props) {
   const handelSubmit = () => {
     //need to loop over all buttons with the active class
     //then grab their values and toss them into a new action with thoese values as perameters
-    fetchRandomActivityFromApi();
+    const typeValue = document.querySelector("#type .active").value;
+    const participantsValue = document.querySelector("#participants .active").value;
+    const priceMax = document.querySelector("#price .active").getAttribute("max");
+    const priceMin = document.querySelector("#price .active").getAttribute("min");
+    if (!typeValue && !participantsValue && !priceMax && !priceMin) {
+      fetchRandomActivityFromApi();
+    } else {
+      const url = new URL("http://www.boredapi.com/api/activity?");
+      if (typeValue) url.searchParams.append("type", typeValue);
+      if (participantsValue) url.searchParams.append("participants", participantsValue);
+      if (priceMax) url.searchParams.append("minprice", priceMax);
+      if (priceMin) url.searchParams.append("maxprice", priceMin);
+      console.log(url.href);
+      fetchSpecificActivityFromApi(url.href);
+    }
   };
   return (
     <StyledActivityForm>
@@ -116,13 +130,28 @@ function Form(props) {
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
         {/*value is "minprice", "maxprice" for api call*/}
-        <button className='disabled' onClick={selectCurrentButton} value={[0, 25]}>
+        <button
+          className='disabled'
+          onClick={selectCurrentButton}
+          max={0}
+          min={0.25}
+          value={["0", ".25"]}>
           <FontAwesomeIcon icon={faCoins} /> Cheap
         </button>
-        <button className='disabled' onClick={selectCurrentButton} value={[25, 50]}>
+        <button
+          className='disabled'
+          onClick={selectCurrentButton}
+          max={0.25}
+          min={0.5}
+          value={[".25", ".5"]}>
           <FontAwesomeIcon icon={faMoneyBills} /> Affordable
         </button>
-        <button className='disabled' onClick={selectCurrentButton} value={[50, 100]}>
+        <button
+          className='disabled'
+          onClick={selectCurrentButton}
+          max={0.5}
+          min={1}
+          value={[".5", "1"]}>
           <FontAwesomeIcon icon={faSackDollar} /> Expensive
         </button>
       </div>
