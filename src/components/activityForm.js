@@ -81,7 +81,6 @@ function Form(props) {
       if (participantsValue) url.searchParams.append("participants", participantsValue);
       if (priceMax) url.searchParams.append("minprice", priceMax);
       if (priceMin) url.searchParams.append("maxprice", priceMin);
-      console.log(url.href);
       fetchSpecificActivityFromApi(url.href);
     }
   };
