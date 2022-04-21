@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import * as actions from "../state/action-creators";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDice,
@@ -16,10 +15,8 @@ import {
   faMoneyBills,
   faSackDollar,
 } from "@fortawesome/free-solid-svg-icons";
-// import { connect } from "react-redux";
 import styled from "styled-components";
 
-/* background-color: ${(props) => randomProperty(props.color.vibrant)}; */
 const StyledActivityForm = styled.div`
   #submit {
     transition: transform ${(props) => props.theme.animation.base};
@@ -58,7 +55,6 @@ const StyledActivityForm = styled.div`
   }
 `;
 
-// export default function Form(props) {
 function Form(props) {
   const { fetchRandomActivityFromApi } = props;
 
@@ -73,6 +69,8 @@ function Form(props) {
   };
 
   const handelSubmit = () => {
+    //need to loop over all buttons with the active class
+    //then grab their values and toss them into a new action with thoese values as perameters
     fetchRandomActivityFromApi();
   };
   return (
@@ -82,6 +80,7 @@ function Form(props) {
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
+        {/*value is "type" for api call*/}
         <button className='disabled' onClick={selectCurrentButton} value='education'>
           <FontAwesomeIcon icon={faGraduationCap} /> Educational
         </button>
@@ -100,6 +99,7 @@ function Form(props) {
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
+        {/*value is "participants" for api call*/}
         <button className='disabled' onClick={selectCurrentButton} value={1}>
           <FontAwesomeIcon icon={faUser} /> Solo
         </button>
@@ -115,6 +115,7 @@ function Form(props) {
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
+        {/*value is "minprice", "maxprice" for api call*/}
         <button className='disabled' onClick={selectCurrentButton} value={[0, 25]}>
           <FontAwesomeIcon icon={faCoins} /> Cheap
         </button>

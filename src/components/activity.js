@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import * as actions from "../state/action-creators";
-/* background-color: ${(props) => randomProperty(props.color.vibrant)}; */
 const StyledActivity = styled.div`
   margin: 50px 0;
   .sub {
@@ -14,7 +13,6 @@ const StyledActivity = styled.div`
   }
 `;
 
-// export default function Activity(props) {
 function Activity(props) {
   const { activity, fetchRandomActivityFromApi } = props;
 
