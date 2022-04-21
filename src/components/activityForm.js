@@ -77,16 +77,13 @@ function Form(props) {
     const participantsValue = document.querySelector("#participants .active").value;
     const priceMax = document.querySelector("#price .active").getAttribute("max");
     const priceMin = document.querySelector("#price .active").getAttribute("min");
-    if (!typeValue && !participantsValue && !priceMax && !priceMin) {
-      fetchRandomActivityFromApi();
-    } else {
-      const url = new URL("http://www.boredapi.com/api/activity?");
-      if (typeValue) url.searchParams.append("type", typeValue);
-      if (participantsValue) url.searchParams.append("participants", participantsValue);
-      if (priceMin) url.searchParams.append("minprice", priceMin);
-      if (priceMax) url.searchParams.append("maxprice", priceMax);
-      fetchSpecificActivityFromApi(url.href);
-    }
+
+    const url = new URL("http://www.boredapi.com/api/activity?");
+    if (typeValue) url.searchParams.append("type", typeValue);
+    if (participantsValue) url.searchParams.append("participants", participantsValue);
+    if (priceMin) url.searchParams.append("minprice", priceMin);
+    if (priceMax) url.searchParams.append("maxprice", priceMax);
+    fetchSpecificActivityFromApi(url.href);
   };
   return (
     <StyledActivityForm>
@@ -143,7 +140,7 @@ function Form(props) {
       </div>
 
       <button id='submit' onClick={handelSubmit}>
-        Gimme somthing todo!
+        Gimme somtheing to do!
       </button>
     </StyledActivityForm>
   );
