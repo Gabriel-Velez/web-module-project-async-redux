@@ -26,6 +26,11 @@ const StyledActivityForm = styled.div`
     transform: scale(1.125);
   }
 
+  button.disabled {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
   .row {
     display: flex;
     justify-content: center;
@@ -52,53 +57,62 @@ const StyledActivityForm = styled.div`
 
 // function Form(props) {
 export default function Form(props) {
+  const selectCurrentButton = (e) => {
+    const parentElem = e.target.parentElement;
+    parentElem.childNodes.forEach((child) => {
+      child.classList.add("disabled");
+      child.classList.remove("active");
+    });
+    e.target.classList.remove("disabled");
+    e.target.classList.add("active");
+  };
   return (
     <StyledActivityForm>
       <h3>Type</h3>
       <div className='row type'>
-        <button>
+        <button className='active' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faGraduationCap} /> Educational
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faComments} /> Social
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faCouch} /> Relaxing
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faUtensils} /> Cooking
         </button>
       </div>
       <h3>Number of Participants</h3>
       <div className='row participants'>
-        <button>
+        <button className='active' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faUser} /> Solo
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faUserGroup} /> Duo
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faUsers} /> Group
         </button>
       </div>
       <h3>Price</h3>
       <div className='row price'>
-        <button>
+        <button className='active' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faCoins} /> Cheap
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faMoneyBills} /> Affordable
         </button>
-        <button disabled={true}>
+        <button className='disabled' onClick={selectCurrentButton}>
           <FontAwesomeIcon icon={faSackDollar} /> Expensive
         </button>
       </div>

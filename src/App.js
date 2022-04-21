@@ -40,19 +40,16 @@ const StyledApp = styled.div`
     background-color: ${(props) => props.theme.colors.vibrant.clarent};
     transition: transform ${(props) => props.theme.animation.double},
       opacity ${(props) => props.theme.animation.base};
+    &:hover {
+      transform: translateY(-20px);
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+    }
     svg {
       margin-right: 10px;
     }
-  }
-
-  button:disabled {
-    opacity: 0.5;
-    cursor: pointer;
-  }
-
-  button:hover {
-    transform: translateY(-20px);
-    opacity: 1;
   }
 `;
 
