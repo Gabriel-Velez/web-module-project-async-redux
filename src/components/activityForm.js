@@ -1,4 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
+import * as actions from "../state/action-creators";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDice,
@@ -55,8 +58,10 @@ const StyledActivityForm = styled.div`
   }
 `;
 
-// function Form(props) {
-export default function Form(props) {
+// export default function Form(props) {
+function Form(props) {
+  const { fetchRandomActivityFromApi } = props;
+
   const selectCurrentButton = (e) => {
     const parentElem = e.target.parentElement;
     parentElem.childNodes.forEach((child) => {
@@ -65,6 +70,10 @@ export default function Form(props) {
     });
     e.target.classList.remove("disabled");
     e.target.classList.add("active");
+  };
+
+  const handelSubmit = () => {
+    fetchRandomActivityFromApi();
   };
   return (
     <StyledActivityForm>
@@ -117,13 +126,10 @@ export default function Form(props) {
         </button>
       </div>
 
-      <button id='submit'>Gimme somthing todo!</button>
+      <button id='submit' onClick={handelSubmit}>
+        Gimme somthing todo!
+      </button>
     </StyledActivityForm>
   );
 }
-// const mapStateToProps = (state) => {
-//   return {
-//   };
-// };
-
-// export default connect(mapStateToProps, actions)(Form);
+export default connect((st) => st, actions)(Form);
