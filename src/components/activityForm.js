@@ -31,6 +31,10 @@ const StyledActivityForm = styled.div`
     cursor: pointer;
   }
 
+  .attribute {
+    color: ${(props) => props.theme.colors.grey};
+  }
+
   .row {
     display: flex;
     justify-content: center;
@@ -86,7 +90,7 @@ function Form(props) {
   };
   return (
     <StyledActivityForm>
-      <h3>Type</h3>
+      <h3 className='attribute'>Type:</h3>
       <div className='row type' id='type'>
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
@@ -105,7 +109,7 @@ function Form(props) {
           <FontAwesomeIcon icon={faUtensils} /> Cooking
         </button>
       </div>
-      <h3>Peeps</h3>
+      <h3 className='attribute'>Peeps:</h3>
       <div className='row participants' id='participants'>
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
@@ -121,7 +125,7 @@ function Form(props) {
           <FontAwesomeIcon icon={faUsers} /> Group
         </button>
       </div>
-      <h3>Price</h3>
+      <h3 className='attribute'>Price:</h3>
       <div className='row price' id='price'>
         <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
