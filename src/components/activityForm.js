@@ -79,8 +79,8 @@ function Form(props) {
       const url = new URL("http://www.boredapi.com/api/activity?");
       if (typeValue) url.searchParams.append("type", typeValue);
       if (participantsValue) url.searchParams.append("participants", participantsValue);
-      if (priceMax) url.searchParams.append("maxprice", priceMax);
       if (priceMin) url.searchParams.append("minprice", priceMin);
+      if (priceMax) url.searchParams.append("maxprice", priceMax);
       fetchSpecificActivityFromApi(url.href);
     }
   };
