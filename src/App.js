@@ -26,6 +26,7 @@ const StyledApp = styled.div`
 
   h3 {
     font-size: ${(props) => props.theme.fontSize.h3};
+    text-transform: uppercase;
   }
 
   p {

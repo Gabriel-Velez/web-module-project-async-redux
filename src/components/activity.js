@@ -23,7 +23,7 @@ function Activity(props) {
   }, []);
   return (
     <StyledActivity>
-      <h2 className='sub'>Try this!</h2>
+      <h2 className='sub'>Try this:</h2>
       <h1 className='head' id='activity'>
         {activity}
       </h1>

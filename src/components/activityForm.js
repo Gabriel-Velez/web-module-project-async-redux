@@ -78,50 +78,50 @@ function Form(props) {
   return (
     <StyledActivityForm>
       <h3>Type</h3>
-      <div className='row type'>
-        <button className='active' onClick={selectCurrentButton}>
+      <div className='row type' id='type'>
+        <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value='education'>
           <FontAwesomeIcon icon={faGraduationCap} /> Educational
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value='social'>
           <FontAwesomeIcon icon={faComments} /> Social
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value='relaxation'>
           <FontAwesomeIcon icon={faCouch} /> Relaxing
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value='cooking'>
           <FontAwesomeIcon icon={faUtensils} /> Cooking
         </button>
       </div>
       <h3>Number of Participants</h3>
-      <div className='row participants'>
-        <button className='active' onClick={selectCurrentButton}>
+      <div className='row participants' id='participants'>
+        <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value={1}>
           <FontAwesomeIcon icon={faUser} /> Solo
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value={2}>
           <FontAwesomeIcon icon={faUserGroup} /> Duo
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value={3}>
           <FontAwesomeIcon icon={faUsers} /> Group
         </button>
       </div>
       <h3>Price</h3>
-      <div className='row price'>
-        <button className='active' onClick={selectCurrentButton}>
+      <div className='row price' id='price'>
+        <button className='active' onClick={selectCurrentButton} value={null}>
           <FontAwesomeIcon icon={faDice} /> Random
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value={[0, 25]}>
           <FontAwesomeIcon icon={faCoins} /> Cheap
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value={[25, 50]}>
           <FontAwesomeIcon icon={faMoneyBills} /> Affordable
         </button>
-        <button className='disabled' onClick={selectCurrentButton}>
+        <button className='disabled' onClick={selectCurrentButton} value={[50, 100]}>
           <FontAwesomeIcon icon={faSackDollar} /> Expensive
         </button>
       </div>
