@@ -10,7 +10,7 @@ const StyledActivity = styled.div`
   }
   .head {
     text-decoration: underline;
-    margin: 20px 0;
+    margin: 0 30px;
   }
   .error {
     color: ${(props) => props.theme.colors.vibrant.clarent};
