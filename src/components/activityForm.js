@@ -96,6 +96,7 @@ function Form(props) {
     if (priceMin) url.searchParams.append("minprice", priceMin);
     if (priceMax) url.searchParams.append("maxprice", priceMax);
     fetchSpecificActivityFromApi(url.href);
+    window.scrollTo(0, 0);
   };
   return (
     <StyledActivityForm>

@@ -13,6 +13,7 @@ const StyledActivity = styled.div`
     margin: 0 30px;
   }
   .error {
+    margin-top: 20px;
     color: ${(props) => props.theme.colors.vibrant.clarent};
   }
 `;
