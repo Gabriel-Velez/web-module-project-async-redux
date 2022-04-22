@@ -39,6 +39,10 @@ const StyledActivityForm = styled.div`
     }
   }
 
+  .active {
+    cursor: default;
+  }
+
   .attribute {
     color: ${(props) => props.theme.colors.grey};
   }
