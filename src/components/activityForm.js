@@ -56,7 +56,7 @@ const StyledActivityForm = styled.div`
     justify-content: center;
     align-content: center;
     gap: 50px;
-    margin: 25px 0;
+    margin: 25px;
     &.type {
       button {
         background-color: ${(props) => props.theme.colors.vibrant.blueJeans};
