@@ -14,6 +14,10 @@ import {
   faCoins,
   faMoneyBills,
   faHandHoldingDollar,
+  faHammer,
+  faDove,
+  faMusic,
+  faPersonWalking,
 } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
@@ -117,6 +121,19 @@ function Form(props) {
         </button>
         <button className='disabled' onClick={selectCurrentButton} value='cooking'>
           <FontAwesomeIcon icon={faUtensils} /> Cooking
+        </button>
+
+        <button className='disabled' onClick={selectCurrentButton} value='diy'>
+          <FontAwesomeIcon icon={faHammer} /> DIY
+        </button>
+        <button className='disabled' onClick={selectCurrentButton} value='charity'>
+          <FontAwesomeIcon icon={faDove} /> Charity
+        </button>
+        <button className='disabled' onClick={selectCurrentButton} value='music'>
+          <FontAwesomeIcon icon={faMusic} /> Music
+        </button>
+        <button className='disabled' onClick={selectCurrentButton} value='busywork'>
+          <FontAwesomeIcon icon={faPersonWalking} /> Errands
         </button>
       </div>
       <h3 className='attribute'>Peeps:</h3>
