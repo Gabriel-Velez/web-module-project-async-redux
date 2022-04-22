@@ -20,7 +20,7 @@ import styled from "styled-components";
 const StyledActivityForm = styled.div`
   #submit {
     transition: transform ${(props) => props.theme.animation.base};
-    margin-top: 25px;
+    margin: 25px 0;
     &:hover,
     &:focus {
       transform: scale(1.125);
