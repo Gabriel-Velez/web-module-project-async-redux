@@ -104,6 +104,9 @@ function Form(props) {
   };
   return (
     <StyledActivityForm>
+      <button id='submit' onClick={handelSubmit}>
+        Gimme somtheing to do!
+      </button>
       <h3 className='attribute'>Type:</h3>
       <div className='row type' id='type'>
         <button className='active' onClick={selectCurrentButton} value={null}>
@@ -168,10 +171,6 @@ function Form(props) {
           <FontAwesomeIcon icon={faMoneyBills} /> Expensive
         </button>
       </div>
-
-      <button id='submit' onClick={handelSubmit}>
-        Gimme somtheing to do!
-      </button>
     </StyledActivityForm>
   );
 }
