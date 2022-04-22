@@ -1,7 +1,3 @@
-# Live demo:
-
-Link here
-
 ## Introduction
 
 Are you bored you can use this random activity genorator to
