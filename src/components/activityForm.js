@@ -55,7 +55,7 @@ const StyledActivityForm = styled.div`
     display: flex;
     justify-content: center;
     align-content: center;
-    gap: 50px;
+    gap: 25px;
     margin: 25px;
     &.type {
       button {
