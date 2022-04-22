@@ -105,7 +105,7 @@ function Form(props) {
   return (
     <StyledActivityForm>
       <button id='submit' onClick={handelSubmit}>
-        Gimme somtheing to do!
+        Gimme somthein else
       </button>
       <h3 className='attribute'>Type:</h3>
       <div className='row type' id='type'>
