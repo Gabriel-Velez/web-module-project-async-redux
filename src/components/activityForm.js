@@ -31,7 +31,8 @@ const StyledActivityForm = styled.div`
     cursor: pointer;
     transition: transform ${(props) => props.theme.animation.double},
       opacity ${(props) => props.theme.animation.base};
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateY(-10px);
       opacity: 1;
     }
